@@ -26,7 +26,7 @@ def main():
         {'name': 'Настя', 'age': 27, 'job': 'Лектор'}
     ]
     with open('workers.csv', 'w', encoding='utf-8') as f:
-        headers = ['name', 'age', 'job']
+        headers = workers[0].keys()
         writer = csv.DictWriter(f, headers, delimiter=';')
         writer.writeheader()
         for worker in workers:
